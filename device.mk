@@ -30,7 +30,7 @@ $(call inherit-product, vendor/mtk-ims/ims.mk)
 $(call inherit-product-if-exists, packages/apps/RealmeDirac/dirac.mk)
 
 # Parts
-$(call inherit-product-if-exists, packages/apps/RealmeParts/parts.mk)
+$(call inherit-product, $(DEVICE_PATH)/RealmeParts/parts.mk)
 
 # VNDK
 PRODUCT_SHIPPING_API_LEVEL := 28
