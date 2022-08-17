@@ -37,7 +37,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@5.0.vendor \
     android.hardware.audio.common@5.0-util.vendor \
     android.hardware.audio.effect@5.0-impl \
-    android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.soundtrigger@2.2.vendor \
     audio.a2dp.default \
     audio.bluetooth.default \
@@ -69,6 +68,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0 \
     android.hardware.bluetooth.a2dp@1.0.vendor \
+    android.hardware.bluetooth.audio-impl \
     android.hardware.bluetooth@1.0.vendor \
     libbtconfigstore 
 
