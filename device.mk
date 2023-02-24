@@ -267,7 +267,6 @@ PRODUCT_PACKAGES += \
 
 # Realme
 PRODUCT_PACKAGES += \
-    RealmeDirac \
     RealmeParts
 
 PRODUCT_PACKAGES += \
