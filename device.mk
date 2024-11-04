@@ -22,13 +22,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # IMS
 $(call inherit-product, vendor/realme/RMX1941-ims/RMX1941-ims.mk)
 
-# Dynamic Partition
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
-
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/flash_super_dummy.sh:install/bin/flash_super_dummy.sh
-
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 28
 
@@ -73,7 +66,9 @@ PRODUCT_PACKAGES += \
 # Bluetooth Audio (System-side HAL, sysbta)
 PRODUCT_PACKAGES += \
     audio.sysbta.default \
-    android.hardware.bluetooth.audio-service-system
+    android.hardware.bluetooth.audio-service-system \
+    android.hardware.bluetooth@1.0.vendor \
+    libbtconfigstore 
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -112,10 +107,10 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.memtrack@1.0.vendor
-
-# Fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
+    
+# FSTAB
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/rootdir/etc/fstab.mt6765:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6765
 
 # Gatekeeper
 PRODUCT_PACKAGES += \

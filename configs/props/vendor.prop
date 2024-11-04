@@ -85,9 +85,6 @@ ro.hardware.egl=meow
 # FRP
 ro.frp.pst=/dev/block/platform/bootdevice/by-name/frp
 
-# Fastbootd
-ro.fastbootd.available=true
-
 # GPS
 ro.vendor.mtk_agps_app=1
 ro.vendor.mtk_gps_support=1
