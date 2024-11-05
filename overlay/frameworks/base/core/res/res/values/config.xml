@@ -167,10 +167,6 @@
      <bool name="config_dozeAlwaysOnEnabled">true</bool>
      <bool name="config_displayBlanksAfterDoze">true</bool>
 
-    <!-- If true, the doze component is not started until after the screen has been turned off
-         and the screen off animation has been performed. -->
-     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
-
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
      <bool name="config_dynamic_bind_ims">true</bool>
      <bool name="config_eap_sim_based_auth_supported">true</bool>
@@ -444,27 +440,6 @@
     -->
      <string name="config_mainBuiltInDisplayCutout">M -38,0 L -38,56 L 38,56 L 38,0 Z</string>
 
-    <!-- Array of desired screen brightness in nits corresponding to the lux values
-         in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
-         config_screenBrightnessMaximumNits, the display brightness is defined as the measured
-         brightness of an all-white image.
-         If this is defined then:
-            - config_autoBrightnessLcdBacklightValues should not be defined
-            - config_screenBrightnessNits must be defined
-            - config_screenBrightnessBacklight must be defined
-         This array should have size one greater than the size of the config_autoBrightnessLevels
-         array. The brightness values must be non-negative and non-decreasing. This must be
-         overridden in platform specific overlays -->
-    <array name="config_autoBrightnessDisplayValuesNits">
-        <item>5.459351</item>
-        <item>21.25559</item>
-        <item>62.240692</item>
-        <item>158.51437</item>
-        <item>239.18697</item>
-        <item>350.8851</item>
-        <item>430.98703</item>
-    </array>
-
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
         <item>40</item>
@@ -476,60 +451,6 @@
         <item>1</item>
         <item>20</item>
         <item>21</item>
-    </integer-array>
-
-    <!-- An array describing the screen's backlight values corresponding to the brightness
-         values in the config_screenBrightnessNits array.
-         This array should be equal in size to config_screenBrightnessBacklight. -->
-    <integer-array name="config_screenBrightnessBacklight">
-        <item>0</item>
-        <item>15</item>
-        <item>30</item>
-        <item>45</item>
-        <item>60</item>
-        <item>75</item>
-        <item>90</item>
-        <item>105</item>
-        <item>120</item>
-        <item>135</item>
-        <item>150</item>
-        <item>165</item>
-        <item>180</item>
-        <item>195</item>
-        <item>210</item>
-        <item>225</item>
-        <item>240</item>
-        <item>255</item>
-    </integer-array>
-
-    <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
-         values in the config_screenBrightnessBacklight array.  On OLED displays these  values
-         should be measured with an all white image while the display is in the fully on state.
-         Note that this value should *not* reflect the maximum brightness value for any high
-         brightness modes but only the maximum brightness value obtainable in a sustainable manner.
-         This array should be equal in size to config_screenBrightnessBacklight -->
-    <array name="config_screenBrightnessNits">
-        <item>0</item>
-        <item>26.11</item>
-        <item>50.5</item>
-        <item>74.17</item>
-        <item>96.89</item>
-        <item>118.3</item>
-        <item>139.8</item>
-        <item>162.9</item>
-        <item>189.8</item>
-        <item>217.4</item>
-        <item>240.4</item>
-        <item>265.3</item>
-        <item>288.7</item>
-        <item>316</item>
-        <item>340.8</item>
-        <item>357.9</item>
-        <item>376.2</item>
-        <item>392.9</item>
-    </array>
-    <integer-array name="config_screenDarkeningThresholds">
-        <item>200</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
@@ -791,32 +712,7 @@
         <item>504</item>
         <item>1259</item>
     </integer-array>
-    <integer-array name="config_autoBrightnessLevels">
-        <item>1</item>
-        <item>15</item>
-        <item>30</item>
-        <item>50</item>
-        <item>100</item>
-        <item>200</item>
-        <item>300</item>
-        <item>400</item>
-        <item>500</item>
-        <item>650</item>
-        <item>800</item>
-        <item>1000</item>
-        <item>1500</item>
-        <item>2000</item>
-        <item>3000</item>
-        <item>4000</item>
-        <item>5000</item>
-        <item>7000</item>
-        <item>10000</item>
-        <item>12500</item>
-        <item>15000</item>
-        <item>17500</item>
-        <item>20000</item>
-        <item>50000</item>
-    </integer-array>
+
     <!-- FPSInfoService Fps file path -->
     <string name="config_fpsInfoSysNode" translatable="false">/proc/fps_tm/fps_count</string>
 	
