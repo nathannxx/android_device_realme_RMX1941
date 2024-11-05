@@ -1,0 +1,96 @@
+on init
+    mount none /vendor/lost+found /vendor/overlay bind
+	
+   # ZRAM setup
+    write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/page-cluster 0
+    write /proc/sys/vm/swappiness 100
+    write /proc/sys/vm/vfs_cache_pressure 100
+	
+    setprop persist.vendor.vilte_support 1
+
+    # Custom overrides that need to happen right on boot
+    # Override vendor fstab
+    # We only need it to be overridden before things are mounted
+    mount none /system/etc/fstab.mt6765 /vendor/etc/fstab.mt6765 bind
+
+on fs
+    mount_all /vendor/etc/fstab.mt6765 --early
+    mount_all /vendor/etc/fstab.mt6765 --late
+
+on post-fs
+    # Unmount the overridden fstab because the SELinux label is incorrect
+    # and some MTK daemons can crash because of that
+    # (at post-fs, the fstab has already been used to mount the partitions,
+    #  so it is fine to just revert back)
+    umount /vendor/etc/fstab.mt6765
+	
+    # boot perf. tune
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 100"
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 100"
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 100"
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 100"
+    write /proc/sys/kernel/sched_stune_task_threshold 0
+
+on property:ro.oppo.reconcile_media_resource=1
+    start media-resource-reconciliation
+
+on boot
+    # USB-OTG
+    chown system system /sys/class/power_supply/usb/otg_switch
+    chmod 0644 /sys/class/power_supply/usb/otg_switch 
+    write /sys/class/power_supply/usb/otg_switch 1 
+
+    # Disable edge limit control interface
+    write /proc/touchpanel/oppo_tp_limit_enable 0
+    write /proc/touchpanel/oppo_tp_direction 1
+
+    # Services
+    stop console
+
+    # DT2W
+    chown system system /proc/touchpanel/double_tap_enable
+    chmod 0777 /proc/touchpanel/double_tap_enable
+    write /proc/touchpanel/double_tap_enable 1
+
+    # ZRAM
+    swapon_all /vendor/etc/fstab.mt6765
+    swapon_all /system/etc/fstab.mt6765
+
+service face_hal /system/bin/true
+    oneshot
+    disabled
+
+service swap_enable /vendor/bin/sh /system/bin/swap_enable.sh
+    class late_start
+    disabled
+    user root
+    group system
+    oneshot
+	
+service perf_profile /vendor/bin/sh /system/bin/perf_profile.sh
+    class late_start
+    disabled
+    user root
+    group system
+    oneshot
+
+# Performance profiles
+on property:perf_profile=1
+    exec - root -- /system/bin/perf_profile.sh 1
+	
+    start /system/bin/perf_profile.sh
+	
+	start /system/bin/swap_enable.sh
+	
+	# Enable ZRAM
+    swapon_all /system/etc/fstab.mt6765
+    #Reinit lmkd to reconfigure lmkd properties
+    setprop lmkd.reinit 1
+
+    # Restrict permissions to socket file 
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
+
+on property:persist.vendor.radio.port_index=""
+    setprop sys.usb.config adb

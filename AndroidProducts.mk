@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/lineage_RMX1941.mk
+	$(LOCAL_DIR)/bliss_RMX1941.mk
 
 COMMON_LUNCH_CHOICES := \
-        lineage_RMX1941-eng \
-        lineage_RMX1941-user \
-        lineage_RMX1941-userdebug
+        bliss_RMX1941-eng \
+        bliss_RMX1941-user \
+        bliss_RMX1941-userdebug

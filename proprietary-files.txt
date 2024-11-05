@@ -4,24 +4,37 @@ vendor/lib64/libudf.so|f57a4f63592b62c2de72b377021327756fc5fac1
 # ADSP
 vendor/lib64/libadsprpc.so
 
-# AEE
-vendor/lib/libdirect-coredump.so
-vendor/lib64/libdirect-coredump.so
-
-# AEE - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2101131254:user/release-keys
-vendor/lib/libaedv.so|68eb76e22650e6f7b09f6c1db32a72851445789f
-vendor/lib/libladder.so|b3161af9c1ae115b467ed6d210355348717145c8
-vendor/lib/libudf.so|0910236ff7b602a7ee4b6cf5472b5cff0d301f52
-vendor/lib64/libaedv.so|bd09673530e80f6cde27d91229b6df6394191053
-vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
-
 # Audio
-vendor/lib/soundfx/libaudiopreprocessing.so
-vendor/lib/libaudio_engineer_test.so
+vendor/etc/dirac/17061/diracmobile.config
+vendor/etc/dirac/17061/diracvdd.bin
+vendor/etc/dirac/17197/diracmobile.config
+vendor/etc/dirac/17197/diracvdd.bin
+vendor/etc/dirac/17331/diracmobile.config
+vendor/etc/dirac/17331/diracvdd.bin
+vendor/etc/dirac/18161/diracmobile.config
+vendor/etc/dirac/18161/diracvdd.bin
+vendor/etc/dirac/18311/diracmobile.config
+vendor/etc/dirac/18311/diracvdd.bin
+vendor/etc/dirac/18531/diracmobile.config
+vendor/etc/dirac/18531/diracvdd.bin
+vendor/etc/dirac/18540/diracmobile.config
+vendor/etc/dirac/18540/diracvdd.bin
+vendor/etc/dirac/18601/diracmobile.config
+vendor/etc/dirac/18601/diracvdd.bin
+vendor/etc/dirac/18611/diracmobile.config
+vendor/etc/dirac/18611/diracvdd.bin
+vendor/etc/dirac/19661/diracmobile.config
+vendor/etc/dirac/19661/diracvdd.bin
+vendor/etc/dirac/20671/diracmobile.config
+vendor/etc/dirac/20671/diracvdd.bin
+vendor/etc/dirac/20682/diracmobile.config
+vendor/etc/dirac/20682/diracvdd.bin
+vendor/etc/diracmobile.config
+vendor/etc/diracvdd.bin
+vendor/lib/soundfx/libdirac.so
+vendor/lib/libDiracAPI_SHARED.so
 vendor/lib/libaudio_engineer_test.so
 vendor/lib/libaudio_param_parser-vnd.so
-vendor/lib/libaudio_param_parser-vnd.so
-vendor/lib/libaudiocompensationfilter_vendor.so
 vendor/lib/libaudiocompensationfilter_vendor.so
 vendor/lib/libaudiocompensationfilterc.so
 vendor/lib/libaudiocomponentengine_vendor.so
@@ -32,7 +45,7 @@ vendor/lib/libaudiofmtconv.so
 vendor/lib/libaudioloudc.so
 vendor/lib/libaudioprimarydevicehalifclient.so
 vendor/lib/libaudiotoolkit_vendor.so
-vendor/lib/libtinyxml.so
+vendor/lib/libtinycompress.so
 vendor/lib64/libaudio_engineer_test.so
 vendor/lib64/libaudio_param_parser-vnd.so
 vendor/lib64/libaudiocompensationfilter_vendor.so
@@ -45,14 +58,16 @@ vendor/lib64/libaudiofmtconv.so
 vendor/lib64/libaudioloudc.so
 vendor/lib64/libaudioprimarydevicehalifclient.so
 vendor/lib64/libaudiotoolkit_vendor.so
-vendor/lib64/libtinyxml.so
+vendor/lib64/libtinycompress.so
 
-# Audio (Hardware)
+# Audio-Hardware
 vendor/bin/hw/android.hardware.audio@5.0-service-mediatek
 vendor/etc/init/android.hardware.audio@5.0-service-mediatek.rc
 vendor/lib/hw/android.hardware.audio@5.0-impl-mediatek.so
 vendor/lib/hw/audio.primary.mt6765.so
+
 vendor/lib/hw/audio.r_submix.mt6765.so
+vendor/lib/hw/audio.usb.default.so
 vendor/lib/hw/audio.usb.mt6765.so
 vendor/lib/android.hardware.audio.common-util.so
 vendor/lib/vendor.mediatek.hardware.audio@5.1.so
@@ -68,7 +83,7 @@ vendor/bin/hw/android.hardware.bluetooth@1.0-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc
 vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl-mediatek.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
-vendor/lib/hw/audio.bluetooth.default.so
+vendor/lib/libbluetoothem_mtk.so
 vendor/lib/libbluetooth_audio_session_mediatek.so
 vendor/lib/libbluetooth_hw_test.so
 vendor/lib/libbluetooth_mtk.so
@@ -78,7 +93,6 @@ vendor/lib/libbluetoothem_mtk.so
 vendor/lib/libbt-vendor.so
 vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl-mediatek.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
-vendor/lib64/hw/audio.bluetooth.default.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/libbluetooth_hw_test.so
 vendor/lib64/libbluetooth_mtk.so
@@ -88,8 +102,8 @@ vendor/lib64/libbluetoothem_mtk.so
 vendor/lib64/libbt-vendor.so
 
 # Bluetooth-AptX
-lib64/libaptXHD_encoder.so
-lib64/libaptX_encoder.so
+vendor/lib64/libaptXHD_encoder.so
+vendor/lib64/libaptX_encoder.so
 
 # CDSP
 vendor/lib64/libcdsprpc.so
@@ -99,7 +113,6 @@ vendor/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
 vendor/lib/hw/vendor.oppo.hardware.camera.slogan@1.0-impl.so
 vendor/lib/libVDPostureDetection.so
 vendor/lib/libmpbase.so
-vendor/lib/libstdc++.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.1.so
 vendor/lib/vendor.oppo.hardware.camera.slogan@1.0.so
@@ -109,7 +122,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.camera.ccap@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
 vendor/lib64/hw/vendor.oppo.hardware.camera.slogan@1.0-impl.so
 vendor/lib64/libMegviiHumBokehPost-mtk.so
-vendor/lib64/libOPPORectify.so
 vendor/lib64/libSonyIMX230PdafLibrary.so
 vendor/lib64/libSonyIMX230PdafLibraryWrapper.so
 vendor/lib64/libSonyIMX338PdafLibrary.so
@@ -167,14 +179,9 @@ vendor/lib64/libcameracustom.plugin.so
 vendor/lib64/libcameracustom.so
 vendor/lib64/libcvface_api.so
 vendor/lib64/libmpbase.so
-vendor/lib64/liboppo_aisd.so
-vendor/lib64/liboppo_arcSoftBokehEngine.so
-vendor/lib64/liboppo_blank_algo.so
-vendor/lib64/liboppo_platform_hwi.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
 vendor/lib64/libstblur_capture_api.so
-vendor/lib64/libstdc++.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
@@ -184,7 +191,7 @@ vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 vendor/lib64/vendor.oppo.hardware.camera.slogan@1.0.so
 
-# Camera (Arcsoft)
+# Camera-arcsoft
 vendor/lib/libarcsoft_distortion_correction.so
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_distortion_correction.so
@@ -204,45 +211,124 @@ vendor/lib64/libarcsoft_smart_denoise.so
 vendor/lib64/libarcsoft_supervideostabilization.so
 vendor/lib64/libarcsoft_videostabilizer.so
 
-# Camera (Bin)
+# Camera-bin
 vendor/bin/hw/camerahalserver
 vendor/bin/hw/camerasloganserver
-vendor/bin/jpegtool
-vendor/bin/lib3a.ccu.dm
-vendor/bin/lib3a.ccu.pm
-vendor/bin/libccu_gc2375h_ly_mipi_raw.dm
-vendor/bin/libccu_gc2375h_ly_mipi_raw.pm
-vendor/bin/libccu_gc2375h_mipi_raw.dm
-vendor/bin/libccu_gc2375h_mipi_raw.pm
-vendor/bin/libccu_gc5035_mipi_raw.dm
-vendor/bin/libccu_gc5035_mipi_raw.pm
-vendor/bin/libccu_hi1336_mipi_raw.dm
-vendor/bin/libccu_hi1336_mipi_raw.pm
-vendor/bin/libccu_hi556_mipi_raw.dm
-vendor/bin/libccu_hi556_mipi_raw.pm
-vendor/bin/libccu_s5k3l6_mipi_raw.dm
-vendor/bin/libccu_s5k3l6_mipi_raw.pm
-vendor/bin/libccu_sp2509v_mipi_raw.dm
-vendor/bin/libccu_sp2509v_mipi_raw.pm
-vendor/bin/mtkcam-debug
-vendor/etc/init/camerahalserver.rc
-vendor/etc/init/camerasloganserver.rc
 
-# Charger - from Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.1.0.RJOMIXM:user/release-keys
+# Camera-configs
+vendor/etc/camera/faceBeautyParam/fb_default
+vendor/etc/camera/faceBeautyParam/fb_hi1336
+vendor/etc/camera/faceBeautyParam/fb_hi556
+vendor/etc/camera/fb_model/000.png
+vendor/etc/camera/fb_model/000_pre.bin
+vendor/etc/camera/fb_model/000_pre.png
+vendor/etc/camera/fb_model/001.png
+vendor/etc/camera/fb_model/001_pre.bin
+vendor/etc/camera/fb_model/001_pre.png
+vendor/etc/camera/fb_model/002.png
+vendor/etc/camera/fb_model/002_pre.bin
+vendor/etc/camera/fb_model/002_pre.png
+vendor/etc/camera/fb_model/003.png
+vendor/etc/camera/fb_model/003_pre.bin
+vendor/etc/camera/fb_model/003_pre.png
+vendor/etc/camera/fb_model/010.png
+vendor/etc/camera/fb_model/010_pre.bin
+vendor/etc/camera/fb_model/010_pre.png
+vendor/etc/camera/fb_model/011.png
+vendor/etc/camera/fb_model/011_pre.bin
+vendor/etc/camera/fb_model/011_pre.png
+vendor/etc/camera/fb_model/012.png
+vendor/etc/camera/fb_model/012_pre.bin
+vendor/etc/camera/fb_model/012_pre.png
+vendor/etc/camera/fb_model/013.png
+vendor/etc/camera/fb_model/013_pre.bin
+vendor/etc/camera/fb_model/100.png
+vendor/etc/camera/fb_model/100_pre.bin
+vendor/etc/camera/fb_model/100_pre.png
+vendor/etc/camera/fb_model/101.png
+vendor/etc/camera/fb_model/101_pre.bin
+vendor/etc/camera/fb_model/101_pre.png
+vendor/etc/camera/fb_model/102.png
+vendor/etc/camera/fb_model/102_pre.bin
+vendor/etc/camera/fb_model/102_pre.png
+vendor/etc/camera/fb_model/103.png
+vendor/etc/camera/fb_model/103_pre.bin
+vendor/etc/camera/fb_model/103_pre.png
+vendor/etc/camera/fb_model/110.png
+vendor/etc/camera/fb_model/110_pre.bin
+vendor/etc/camera/fb_model/110_pre.png
+vendor/etc/camera/fb_model/111.png
+vendor/etc/camera/fb_model/111_pre.bin
+vendor/etc/camera/fb_model/111_pre.png
+vendor/etc/camera/fb_model/112.png
+vendor/etc/camera/fb_model/112_pre.bin
+vendor/etc/camera/fb_model/112_pre.png
+vendor/etc/camera/fb_model/113.png
+vendor/etc/camera/fb_model/113_pre.bin
+vendor/etc/camera/fb_model/200.png
+vendor/etc/camera/fb_model/200_pre.bin
+vendor/etc/camera/fb_model/200_pre.png
+vendor/etc/camera/fb_model/201.png
+vendor/etc/camera/fb_model/201_pre.bin
+vendor/etc/camera/fb_model/201_pre.png
+vendor/etc/camera/fb_model/202.png
+vendor/etc/camera/fb_model/202_pre.bin
+vendor/etc/camera/fb_model/202_pre.png
+vendor/etc/camera/fb_model/203.png
+vendor/etc/camera/fb_model/203_pre.bin
+vendor/etc/camera/fb_model/203_pre.png
+vendor/etc/camera/fb_model/210.png
+vendor/etc/camera/fb_model/210_pre.bin
+vendor/etc/camera/fb_model/210_pre.png
+vendor/etc/camera/fb_model/211.png
+vendor/etc/camera/fb_model/211_pre.bin
+vendor/etc/camera/fb_model/211_pre.png
+vendor/etc/camera/fb_model/212.png
+vendor/etc/camera/fb_model/212_pre.bin
+vendor/etc/camera/fb_model/212_pre.png
+vendor/etc/camera/fb_model/213.png
+vendor/etc/camera/fb_model/213_pre.bin
+vendor/etc/camera/fb_model/PreNoFaceBinary.bin
+vendor/etc/camera/fb_model/PreNormalBinary.bin
+vendor/etc/camera/fb_model/skin_CCT.png
+vendor/etc/camera/fb_model/skin_back.png
+vendor/etc/camera/fb_model/skin_dark.png
+vendor/etc/camera/fb_model/skin_indian.png
+vendor/etc/camera/fb_model/skin_normal.png
+vendor/etc/camera/fb_model/skinmask.bin
+vendor/etc/camera/fb_model/skinmask.png
+vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model
+vendor/etc/camera/M_Attribute_Gender_Age_1.0.model
+vendor/etc/camera/attribute.model
+vendor/etc/camera/cache_data
+vendor/etc/camera/engineer_camera_config
+vendor/etc/camera/engineer_camera_config_18601
+vendor/etc/camera/engineer_camera_config_19663
+vendor/etc/camera/engineer_camera_config_20682
+vendor/etc/camera/engineer_camera_config_20684
+vendor/etc/camera/gasryuv.model
+vendor/etc/camera/megviisegment_model
+vendor/etc/camera/merged_model_post
+vendor/etc/camera/model_mdl_cache
+
+# Camera-motor
+vendor/etc/init/hw/init.oppo.vendor.motor.rc
+
+# Charger - From Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.1.0.RJOMIXM:user/release-keys
 bin/charger:bin/chargeonlymode|eeb5a0e80057cce782b4555389310e83a408ad37
 
-# DRM (Hardware) - from OnePlus/CPH2469/OP595BL1:12/SP1A.210812.016/S.GDPR.202207051130:user/release-keys
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|8307cea32c20bdc6e7456a6060ebefcfe743b02c
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
+# DRM (Hardware) - from sys_oplus_mssi_64_cn-user 11 RP1A.200720.011 1609743540423 release-keys
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine|bb1ee465a6608d2704fbe9a787acbc7c4dc0aa85
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
 
-# DRM (Widevine) - from OnePlus/CPH2469/OP595BL1:12/SP1A.210812.016/S.GDPR.202207051130:user/release-keys
-vendor/lib/mediadrm/libwvdrmengine.so|0a8dae27c79871c2d163bee5e34278e5d02acb2f
-vendor/lib/libwvhidl.so|0cb77893b553777865f341a255f3f6b37619ae8a
-vendor/lib64/mediadrm/libwvdrmengine.so|2cc07cb4202d54b716b7ca2bf03012d6c6d18cf9
-vendor/lib64/libwvhidl.so|60bfaf3ccac077859955708eadf3d22ac52aadee
+# DRM (Widevine) - from sys_oplus_mssi_64_cn-user 11 RP1A.200720.011 1609743540423 release-keys
+vendor/lib/mediadrm/libwvdrmengine.so|caa4329a696f169c69eb944f8e41570e2e729324
+vendor/lib/libwvhidl.so|0e37b5958fc5033aa6f024ebfc323de8b7b515a5
+vendor/lib64/mediadrm/libwvdrmengine.so|a088fca89908396fd62dac0bc442e87a1224e4b2
+vendor/lib64/libwvhidl.so|52ca2868df2f84525c700032705aa70b656d2f04
 
-# Display (Hardware)
+# Display-Hardware
 vendor/lib/hw/gralloc.mt6765.so
 vendor/lib/hw/memtrack.mt6765.so
 vendor/lib/libdrm.so
@@ -250,14 +336,6 @@ vendor/lib64/hw/gralloc.mt6765.so
 vendor/lib64/hw/hwcomposer.mt6765.so
 vendor/lib64/hw/memtrack.mt6765.so
 vendor/lib64/libdrm.so
-
-# Engineering
--lib/libem_support_jni.so
--lib64/libem_support_jni.so
--priv-app/EngineerMode/EngineerMode.apk
-
-# Camera Feature Policy - from RMX1941EX_C.57
-vendor/lib64/libmtkcam_featurepolicy.so|bf7d88de3821904bdfc348f7df1684dd3f5f77b5
 
 # Firmware
 etc/firmware/hx_criteria.csv
@@ -275,6 +353,12 @@ vendor/firmware/tp/18540/gt9xx_fw.bin
 vendor/firmware/tp/18540/gt9xx_fw_signed.bin
 vendor/firmware/tp/18540/touch_FT5446_fw.bin
 vendor/firmware/tp/18540/touch_FT5446_fw_signed.bin
+vendor/firmware/ufs/SAMSUNG-KM2H7001CM-B518.bin
+vendor/firmware/ufs/SAMSUNG-KM8V7001JM-B810.bin
+vendor/firmware/ufs/SKhynix-H9HQ16AECMMDAR.bin
+vendor/firmware/ufs/SKhynix-H9HQ16AFAMMDAR.bin
+vendor/firmware/ufs/SKhynix-H9HQ53AECMMDAR.bin
+vendor/firmware/ufs/move_target_ufs_fw_to_opporeserve1.sh
 vendor/firmware/BT_FW.cfg
 vendor/firmware/MNL.bin
 vendor/firmware/WIFI_RAM_CODE_soc1_0_1_1.bin
@@ -298,6 +382,8 @@ vendor/lib/hw/gps.default.so
 vendor/lib/libgeofence.so
 vendor/lib64/hw/android.hardware.gnss@2.0-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
+
+# GPS-Hardware
 
 # Graphics
 vendor/lib/egl/egl.cfg
@@ -332,29 +418,44 @@ vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 vendor/lib/hw/sound_trigger.primary.mt6765.so
 vendor/lib64/hw/sound_trigger.primary.mt6765.so
 
+# Media
+vendor/lib/libstagefright_soft_mpeg2dec.so
+
 # Media-Hardware
 vendor/lib/libstagefrighthw.so
 vendor/lib64/libstagefrighthw.so
 
 # Mediatek
+vendor/bin/hw/android.hardware.secure_element@1.0-service-mediatek
 vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
 vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
 vendor/bin/hw/android.hardware.wifi@1.0-service-lazy-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service
+vendor/bin/hw/vendor.mediatek.hardware.log@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service
 vendor/bin/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-service
+vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
+vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
+vendor/etc/init/android.hardware.secure_element@1.0-service-mediatek.rc
 vendor/etc/init/android.hardware.sensors@2.0-service-mediatek.rc
 vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
 vendor/etc/init/android.hardware.wifi@1.0-service-lazy-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc
+vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.5-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
+vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
+vendor/lib/hw/android.hardware.power@1.3-impl-mediatek.so
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.5-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
+vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.0-impl.so
+vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
+vendor/lib/hw/vendor.mediatek.hardware.power@2.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.pq@2.3-impl.so
-vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib/libMtkOmxAdpcmDec.so
 vendor/lib/libMtkOmxAlacDec.so
 vendor/lib/libMtkOmxApeDec.so
@@ -389,14 +490,23 @@ vendor/lib/vendor.mediatek.hardware.mms@1.3.so
 vendor/lib/vendor.mediatek.hardware.mms@1.4.so
 vendor/lib/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
+vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so
 vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
+vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
+vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
+vendor/lib/vendor.mediatek.hardware.power@2.0.so
+vendor/lib/vendor.mediatek.hardware.power@2.1.so
 vendor/lib/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib/vendor.mediatek.hardware.pq@2.2.so
 vendor/lib/vendor.mediatek.hardware.pq@2.3.so
 vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
+vendor/lib64/hw/android.hardware.power@1.3-impl-mediatek.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.5-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.0-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.power@2.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.3-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so
@@ -424,6 +534,7 @@ vendor/lib64/libmtkcam_device3_app.so
 vendor/lib64/libmtkcam_dpe.so
 vendor/lib64/libmtkcam_exif.so
 vendor/lib64/libmtkcam_fdvt.so
+vendor/lib64/libmtkcam_featurepolicy.so
 vendor/lib64/libmtkcam_fwkutils.so
 vendor/lib64/libmtkcam_grallocutils.so
 vendor/lib64/libmtkcam_hwnode.so
@@ -473,11 +584,14 @@ vendor/lib64/libmtkshifter_vendor.so
 vendor/lib64/libmtksysutils.so
 vendor/lib64/libmtktinyxml.so
 vendor/lib64/libmtkutils.so
+vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so
 vendor/lib64/vendor.mediatek.hardware.gpu@1.0.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
+vendor/lib64/vendor.mediatek.hardware.log@1.0.so
+vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.2.so
@@ -485,11 +599,17 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.3.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.4.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
+vendor/lib64/vendor.mediatek.hardware.mtkpower@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@1.1.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@1.2.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@1.3.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
+vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
+vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
+vendor/lib64/vendor.mediatek.hardware.power@1.1.so
+vendor/lib64/vendor.mediatek.hardware.power@2.0.so
+vendor/lib64/vendor.mediatek.hardware.power@2.1.so
 vendor/lib64/vendor.mediatek.hardware.pplagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
@@ -527,19 +647,18 @@ lib/libimsma_socketwrapper.so
 lib/libmtk_vt_service.so
 lib/libmtk_vt_wrapper.so
 lib/libmtkaudio_utils.so
-lib/libmtkavenhancements.so
 lib/libmtklimiter.so
 lib/libmtkperf_client.so
 lib/libmtkshifter.so
 lib/libsignal.so
+lib/libsink.so
 lib/libsource.so
 lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
 lib/libvt_avsync.so
 lib/vendor.mediatek.hardware.videotelephony@1.0.so
-lib64/libmtk_vt_wrapper.so
+lib64/libmtk_vt_wrapper.so:priv-app/ImsService/lib/arm64/libmtk_vt_wrapper.so
 lib64/libmtkaudio_utils.so
-lib64/libmtkavenhancements.so
 lib64/libmtklimiter.so
 lib64/libmtkperf_client.so
 lib64/libmtkshifter.so
@@ -548,54 +667,40 @@ lib64/libvcodec_capenc.so
 lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 -priv-app/ImsService/ImsService.apk
 
-# MTK-IMS - from alps/vnd_oppo6765/oppo6765:11/RP1A.200720.011/1609743540423:user/release-keys
-lib/libsink.so|6df52b0136dd66de1a70f7c284df28f8e979d37c
+# Media
+lib/libmtkavenhancements.so
+lib64/libmtkavenhancements.so
+lib64/extractors/libmtkadpcmextractor.so
+lib64/extractors/libmtkalacextractor.so
+lib64/extractors/libmtkapeextractor.so
+lib64/extractors/libmtkasfextractor.so
+lib64/extractors/libmtkaviextractor.so
+lib64/extractors/libmtkflvextractor.so
+lib64/extractors/libmtkmp3extractor.so
+lib64/extractors/libmtkmpeg2extractor.so
+lib64/extractors/libmtkmkvextractor.so
+lib64/extractors/libOppomp4extractor.so
 
-# MTK-IMS - from bomb RP1A.200720.011 release-keys
+# MTK-IMS | From bomb RP1A.200720.011 release-keys
 lib/libcomutils.so|be7c7b0901119cb260186061b90ef5b6a8292ae2
 lib/libimsma.so|c9e524600acb37296d7c73aa9db56d21e1a88d5b
 lib/libimsma_adapt.so|25159303e5d6404f08bda6456c8fcc2150005a9b
 lib/libimsma_rtp.so|ce2515dfb4802b4c6a121bae848e57342f0d43b9
 lib/libimsma_socketwrapper.so|5c63d8ec795fd0b7b9efcdc1adf4d81c5853c73a
 lib/libsignal.so|e008452949ea9bf486bf9892f024f82edcec5819
+lib/libsink.so|00e2ec0cc399e5411ffa35dbfc0d0d3c17ecc7df
 lib/libsource.so|0e01c6c5d76e21629463d1f94d28d1b8f91c4c30
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so|ecb6326c2a040b930a6bfc744ca761b7856154cd
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|5ed11753481998f26a6e39a9bd270dac3f0da46f
 
-
-# NVRAM
-vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
-vendor/bin/atcid
-vendor/bin/fuelgauged
-vendor/bin/fuelgauged_nvram
-vendor/bin/nvram_daemon
-vendor/etc/init/atcid.rc
-vendor/etc/init/fuelgauged_init.rc
-vendor/etc/init/fuelgauged_nvram_init.rc
-vendor/etc/init/nvram_daemon.rc
-vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
-vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
-vendor/lib/libcustom_nvram.so
-vendor/lib/libfgauge_gm30.so
-vendor/lib/libnvram.so
-vendor/lib/libnvram_daemon_callback.so
-vendor/lib/libnvram_platform.so
-vendor/lib/libnvram_sec.so
-vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
-vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
-vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
-vendor/lib64/libcustom_nvram.so
-vendor/lib64/libnvram.so
-vendor/lib64/libnvram_daemon_callback.so
-vendor/lib64/libnvram_platform.so
-vendor/lib64/libnvram_sec.so
-vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
-vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
-vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
-
 # Oppo
+vendor/bin/hw/vendor.oppo.engnative.engineer@1.0-service
+vendor/bin/hw/vendor.oppo.engnative.engsensor@1.0-service
+vendor/bin/hw/vendor.oppo.hardware.cryptoeng@1.0-service
+vendor/bin/hw/vendor.oppo.hardware.hypnus@1.0-service
 vendor/bin/hw/vendor.oppo.hardware.ktv@1.0-service
 vendor/bin/hw/vendor.oppo.hardware.oiface@1.0-service
+vendor/bin/OppoKeybox
 vendor/etc/audio_param/oppo6762_18540/AudioParamOptions.xml
 vendor/etc/audio_param/oppo6762_18540/BtInfo_AudioParam.xml
 vendor/etc/audio_param/oppo6762_18540/BtInfo_ParamUnitDesc.xml
@@ -692,48 +797,48 @@ vendor/etc/audio_param/oppo6762_18540/VolumeGainMap_AudioParam.xml
 vendor/etc/audio_param/oppo6762_18540/VolumeGainMap_ParamUnitDesc.xml
 vendor/etc/audio_param/oppo6762_18540/Volume_AudioParam.xml
 vendor/etc/audio_param/oppo6762_18540/Volume_ParamUnitDesc.xml
+vendor/etc/init/hw/init.oppo.reserve.rc
+vendor/etc/init/init.oppo.connectivity.rc
+vendor/etc/init/vendor.oppo.engnative.engineer@1.0-service.rc
+vendor/etc/init/vendor.oppo.engnative.engsensor@1.0-service.rc
+vendor/etc/init/vendor.oppo.hardware.cryptoeng@1.0-service_FDE.rc
+vendor/etc/init/vendor.oppo.hardware.hypnus@1.0-service.rc
 vendor/etc/init/vendor.oppo.hardware.ktv@1.0-service.rc
 vendor/etc/init/vendor.oppo.hardware.oiface@1.0-service.rc
+vendor/etc/permissions/vendor-oppo-engnative-engineer.xml
+vendor/etc/permissions/vendor-oppo-engnative-engsensor.xml
+vendor/etc/permissions/vendor-oppo-hardware.cryptoeng.xml
+vendor/etc/media_codecs_oppo.xml
+vendor/etc/media_codecs_oppo_performance.xml
+vendor/etc/media_codecs_oppo_video.xml
 vendor/lib/hw/vendor.oppo.hardware.ktv@1.0-impl.so
 vendor/lib/hw/vendor.oppo.hardware.oiface@1.0-impl.so
+vendor/lib/libOPPORectify.so
+vendor/lib/vendor.oppo.hardware.commondcs@1.0.so
+vendor/lib/vendor.oppo.hardware.hypnus@1.0.so
 vendor/lib/vendor.oppo.hardware.ktv@1.0.so
 vendor/lib/vendor.oppo.hardware.oiface@1.0.so
 vendor/lib64/hw/vendor.oppo.hardware.ktv@1.0-impl.so
 vendor/lib64/hw/vendor.oppo.hardware.oiface@1.0-impl.so
+vendor/lib64/libOPPORectify.so
+vendor/lib64/liboppo_aisd.so
+vendor/lib64/liboppo_arcSoftBokehEngine.so
+vendor/lib64/liboppo_blank_algo.so
+vendor/lib64/liboppo_platform_hwi.so
+vendor/lib64/vendor.oppo.engnative.engineer@1.0.so
+vendor/lib64/vendor.oppo.engnative.engsensor@1.0.so
+vendor/lib64/vendor.oppo.engnative.transfer@1.0.so
+vendor/lib64/vendor.oppo.hardware.commondcs@1.0.so
+vendor/lib64/vendor.oppo.hardware.cryptoeng@1.0.so
+vendor/lib64/vendor.oppo.hardware.hypnus@1.0.so
 vendor/lib64/vendor.oppo.hardware.ktv@1.0.so
 vendor/lib64/vendor.oppo.hardware.oiface@1.0.so
+vendor/lib64/vendor.oppo.hardware.wifi.hostapd@1.0.so
+vendor/lib64/vendor.oppo.hardware.wifi.supplicant@1.0.so
 
-# Power
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
-vendor/bin/md_monitor
-vendor/bin/md_monitor_ctrl
-vendor/etc/init/md_monitor.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
-vendor/lib/hw/android.hardware.power@1.3-impl-mediatek.so
+# Power-Hardware
 vendor/lib/hw/power.mt6765.so
-vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.0-impl.so
-vendor/lib/hw/vendor.mediatek.hardware.power@2.1-impl.so
-vendor/lib/libmmprofile.so
-vendor/lib/libperfctl_vendor.so
-vendor/lib/libpowerhal.so
-vendor/lib/libpowerhalwrap_vendor.so
-vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so
-vendor/lib/vendor.mediatek.hardware.power@2.0.so
-vendor/lib/vendor.mediatek.hardware.power@2.1.so
-vendor/lib64/hw/android.hardware.power@1.3-impl-mediatek.so
 vendor/lib64/hw/power.mt6765.so
-vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.0-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.power@2.1-impl.so
-vendor/lib64/libmmprofile.so
-vendor/lib64/libperfctl_vendor.so
-vendor/lib64/libpowerhal.so
-vendor/lib64/libpowerhalwrap_vendor.so
-vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower@1.0.so
-vendor/lib64/vendor.mediatek.hardware.power@1.1.so
-vendor/lib64/vendor.mediatek.hardware.power@2.0.so
-vendor/lib64/vendor.mediatek.hardware.power@2.1.so
 
 # Sensors
 vendor/lib/sensors.ap.so
@@ -775,6 +880,15 @@ lib64/vendor.trustonic.teeregistry@1.0.so
 priv-app/TeeService/lib/arm64/libTeeServiceJni.so
 -priv-app/TeeService/TeeService.apk
 
+# Vibrator - from Nokia/Ronin_00WW/RNN_sprout:11/RP1A.200720.011/00WW_1_100:user/release-keys
+vendor/bin/hw/android.hardware.vibrator-service.mediatek|6a99b17250dae08eeeb4a720df65ef61b0542021
+vendor/etc/init/vibrator-mtk-default.rc|63f7577081fc8aca1d3cae9a32a77021ff041796
+vendor/etc/vintf/manifest/vibrator-mtk-default.xml|1a42ecd34f950e3737c61247b2d1d85039643729
+
+# VideoTelephony
+lib/vendor.mediatek.hardware.videotelephony@1.0-impl.so
+lib64/vendor.mediatek.hardware.videotelephony@1.0-impl.so
+
 # WiFi
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
@@ -782,21 +896,24 @@ vendor/bin/hostapd_cli
 vendor/bin/wpa_cli
 vendor/etc/init/hostapd.android.rc
 vendor/lib/libwpa_client.so
-vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
+vendor/lib64/libwifi-hal.so:libwifi-hal-mtk.so
 vendor/lib64/libwpa_client.so
-vendor/lib64/vendor.oppo.hardware.wifi.hostapd@1.0.so
-vendor/lib64/vendor.oppo.hardware.wifi.supplicant@1.0.so
 
 # rootdir
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/factory
+vendor/bin/fuelgauged
+vendor/bin/loghidlvendorservice
 vendor/bin/meta_tst
 vendor/bin/mnld
 vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
+vendor/etc/init/aee_aedv.rc
+vendor/etc/init/aee_aedv64.rc
+vendor/etc/init/nvram_daemon.rc
 vendor/etc/init/tee.rc
 vendor/etc/init/trustonic.rc
 vendor/etc/partition_permission.sh
@@ -836,72 +953,87 @@ vendor/bin/hw/vendor.trustonic.teeregistry@1.0-service
 vendor/bin/hw/vendor_transfer
 vendor/bin/hw/vtservice_hidl
 vendor/bin/TBaseDeviceBinding
+vendor/bin/aee_aedv
+vendor/bin/aee_aedv64
+vendor/bin/aee_archivev
+vendor/bin/aee_dumpstatev
+vendor/bin/aeev
+vendor/bin/atcid
 vendor/bin/audiocmdservice_atci
 vendor/bin/autobt
-vendor/bin/bc
 vendor/bin/bip
 vendor/bin/charon
 vendor/bin/dconfig
-vendor/bin/devmem
 vendor/bin/dtc_vendor
-vendor/bin/dumpsys
+vendor/bin/em_hidl
 vendor/bin/epdg_wod
 vendor/bin/exp_lock
-vendor/bin/fsync
-vendor/bin/getconf
+vendor/bin/fuelgauged_nvram
 vendor/bin/gsm0710muxd
-vendor/bin/i2cdetect
-vendor/bin/i2cdump
-vendor/bin/i2cget
-vendor/bin/i2cset
-vendor/bin/iconv
-vendor/bin/install
 vendor/bin/ipsec_mon
+vendor/bin/jpegtool
 vendor/bin/lbs_hidl_service
+vendor/bin/lib3a.ccu.dm
+vendor/bin/lib3a.ccu.pm
+vendor/bin/libccu_gc2375h_ly_mipi_raw.dm
+vendor/bin/libccu_gc2375h_ly_mipi_raw.pm
+vendor/bin/libccu_gc2375h_mipi_raw.dm
+vendor/bin/libccu_gc2375h_mipi_raw.pm
+vendor/bin/libccu_gc5035_mipi_raw.dm
+vendor/bin/libccu_gc5035_mipi_raw.pm
+vendor/bin/libccu_hi1336_mipi_raw.dm
+vendor/bin/libccu_hi1336_mipi_raw.pm
+vendor/bin/libccu_hi556_mipi_raw.dm
+vendor/bin/libccu_hi556_mipi_raw.pm
+vendor/bin/libccu_s5k3l6_mipi_raw.dm
+vendor/bin/libccu_s5k3l6_mipi_raw.pm
+vendor/bin/libccu_sp2509v_mipi_raw.dm
+vendor/bin/libccu_sp2509v_mipi_raw.pm
 vendor/bin/mcDriverDaemon
+vendor/bin/md_monitor
+vendor/bin/md_monitor_ctrl
 vendor/bin/mrdump_tool
 vendor/bin/mtk_agpsd
+vendor/bin/mtkcam-debug
 vendor/bin/muxreport
-vendor/bin/nc
-vendor/bin/netcat
 vendor/bin/netdagent
 vendor/bin/netdc
-vendor/bin/nproc
-vendor/bin/nsenter
 vendor/bin/nusensors
+vendor/bin/nvram_daemon
 vendor/bin/ppl_agent
 vendor/bin/rpmbengclient_test
 vendor/bin/rttv
 vendor/bin/starter
 vendor/bin/stp_dump3
 vendor/bin/stroke
-vendor/bin/unlink
-vendor/bin/unshare
-vendor/bin/uuidgen
 vendor/bin/volte_imcb
 vendor/bin/volte_imsm_93
 vendor/bin/volte_md_status
 vendor/bin/volte_stack
 vendor/bin/volte_ua
-vendor/bin/watch
 vendor/bin/wfca
 vendor/data/misc/ProjectConfig.mk
 vendor/etc/.tp/.ht120.mtc
+vendor/etc/aee-config
+vendor/etc/agps_profiles_conf2.xml
 vendor/etc/apdb/APDB_MT6765_S01__W2020
 vendor/etc/apdb/APDB_MT6765_S01__W2020_ENUM
 vendor/etc/asd/class.tflite
 vendor/etc/asd/detect.tflite
 vendor/etc/aurisys_param/Speech_AudioParam.xml
+vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/init/bootperf.rc
+vendor/etc/init/camerahalserver.rc
+vendor/etc/init/camerasloganserver.rc
+vendor/etc/init/em_hidl_user.rc
+vendor/etc/init/fuelgauged_init.rc
+vendor/etc/init/fuelgauged_nvram_init.rc
 vendor/etc/init/gsm0710muxd.rc
 vendor/etc/init/init.bip.rc
-vendor/etc/init/init.bt_drv.rc
 vendor/etc/init/init.cccifsd.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
-vendor/etc/init/init.fmradio_drv.rc
-vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.md_apps.rc
 vendor/etc/init/init.volte_imcb.rc
 vendor/etc/init/init.volte_imsm_93.rc
@@ -910,12 +1042,12 @@ vendor/etc/init/init.volte_stack.rc
 vendor/etc/init/init.volte_ua.rc
 vendor/etc/init/init.vtservice_hidl.rc
 vendor/etc/init/init.wfca.rc
-vendor/etc/init/init.wlan_drv.rc
-vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/init.wod.rc
 vendor/etc/init/init_connectivity.rc
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/lbs_hidl_service.rc
+vendor/etc/init/loghidlvendorservice.rc
+vendor/etc/init/md_monitor.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/init/mtkrild.rc
 vendor/etc/init/muxreport.rc
@@ -1101,10 +1233,12 @@ vendor/etc/security/cacerts_supl/c542733d.0
 vendor/etc/security/cacerts_supl/f336e3d1.0
 vendor/etc/security/ck.fs
 vendor/etc/security/pl.fs
+vendor/etc/self_init_config/common/self_init_config.xml
 vendor/etc/test_path/common/mixer_paths.xml
 vendor/etc/Conf_MultipleTest_winter_ft5446.ini
 vendor/etc/DSM.xml
 vendor/etc/DSM_config.xml
+vendor/etc/aee-config
 vendor/etc/agps_profiles_conf2.xml
 vendor/etc/aurisys_config.xml
 vendor/etc/ecc_list.xml
@@ -1116,17 +1250,12 @@ vendor/etc/ecc_list_OP17.xml
 vendor/etc/ecc_list_OP18.xml
 vendor/etc/ecc_list_OP20.xml
 vendor/etc/factory.ini
-vendor/etc/file112.wav
 vendor/etc/fstb.cfg
 vendor/etc/mtk_omx_core.cfg
 vendor/etc/ncf_pack.ncf
-vendor/etc/power_whitelist_cfg.xml
-vendor/etc/powercontable.xml
-vendor/etc/powerscntbl.xml
 vendor/etc/slp_conf
 vendor/etc/smsdbvisitor.xml
 vendor/etc/special_pws_channel.xml
-vendor/etc/spk.wav
 vendor/etc/spn-conf-op09.xml
 vendor/etc/throttle.sh
 vendor/etc/virtual-spn-conf-by-efgid1.xml
@@ -1163,7 +1292,9 @@ vendor/lib/libaal_cust.so
 vendor/lib/libaal_key.so
 vendor/lib/libaal_mtk.so
 vendor/lib/libaalservice.so
+vendor/lib/libaedv.so
 vendor/lib/libakm.so
+vendor/lib/libalipay_factory.so
 vendor/lib/libaurisysdemo.so
 vendor/lib/libavcodec.so
 vendor/lib/libavformat.so
@@ -1179,10 +1310,13 @@ vendor/lib/libcharon-ss.so
 vendor/lib/libcrypto-ss.so
 vendor/lib/libcurl-ss.so
 vendor/lib/libcurl_xcap_md.so
+vendor/lib/libcustom_nvram.so
 vendor/lib/libcvsd_mtk.so
+vendor/lib/libdirect-coredump.so
 vendor/lib/libdpframework.so
 vendor/lib/libffmpeg_omx.so
 vendor/lib/libffmpeg_utils.so
+vendor/lib/libfgauge_gm30.so
 vendor/lib/libfile_op.so
 vendor/lib/libged.so
 vendor/lib/libglslcompiler.so
@@ -1198,15 +1332,18 @@ vendor/lib/libh264enc_sa.ca7.so
 vendor/lib/libhevce_sb.ca7.android.so
 vendor/lib/libhwm.so
 vendor/lib/libhydra.so
+vendor/lib/libhypnusclient.so
 vendor/lib/libion_mtk.so
 vendor/lib/libion_ulit.so
 vendor/lib/libipsec_ims_shr.so
 vendor/lib/libjpeg-alpha-oal_vendor.so
 vendor/lib/libjpeg-alpha_vendor.so
+vendor/lib/libladder.so
 vendor/lib/liblic_divx.so
 vendor/lib/libmemtrack_GL.so
 vendor/lib/libmhalImageCodec.so
 vendor/lib/libminiui.so
+vendor/lib/libmmprofile.so
 vendor/lib/libmnetlink_v104.so
 vendor/lib/libmnl.so
 vendor/lib/libmp4enc_sa.ca7.so
@@ -1216,8 +1353,14 @@ vendor/lib/libmsbc_mtk.so
 vendor/lib/libmtcloader.so
 vendor/lib/libmxmafa.so
 vendor/lib/libneuropilot_hal_utils.so
-vendor/lib/libopus.so
+vendor/lib/libnvram.so
+vendor/lib/libnvram_daemon_callback.so
+vendor/lib/libnvram_platform.so
+vendor/lib/libnvram_sec.so
+vendor/lib/libperfctl_vendor.so
 vendor/lib/libpixelflinger.so
+vendor/lib/libpowerhal.so
+vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/libpq_cust_base.so
 vendor/lib/libpq_prot.so
 vendor/lib/libreverb.so
@@ -1228,6 +1371,7 @@ vendor/lib/libspeech_enh_lib.so
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/libsrv_um.so
 vendor/lib/libssl-ss.so
+vendor/lib/libstdc++.so
 vendor/lib/libstfaceunlockocl.so
 vendor/lib/libstorage_otp.so
 vendor/lib/libstrongswan.so
@@ -1236,6 +1380,7 @@ vendor/lib/libswscale.so
 vendor/lib/libsysenv.so
 vendor/lib/libthha.so
 vendor/lib/libtqvalidate.so
+vendor/lib/libudf.so
 vendor/lib/libufwriter.so
 vendor/lib/libusc.so
 vendor/lib/libutinterface_custom_md.so
@@ -1303,7 +1448,9 @@ vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
 vendor/lib64/libaalservice.so
 vendor/lib64/libacdk.so
+vendor/lib64/libaedv.so
 vendor/lib64/libakm.so
+vendor/lib64/libalipay_factory.so
 vendor/lib64/libaurisysdemo.so
 vendor/lib64/libavcodec.so
 vendor/lib64/libavformat.so
@@ -1319,7 +1466,9 @@ vendor/lib64/libcharon-ss.so
 vendor/lib64/libcrypto-ss.so
 vendor/lib64/libcurl-ss.so
 vendor/lib64/libcurl_xcap_md.so
+vendor/lib64/libcustom_nvram.so
 vendor/lib64/libcvsd_mtk.so
+vendor/lib64/libdirect-coredump.so
 vendor/lib64/libdpframework.so
 vendor/lib64/libeffecthal.base.so
 vendor/lib64/libem_camera_jni.so
@@ -1348,6 +1497,7 @@ vendor/lib64/libhdrproc.so
 vendor/lib64/libhevce_sb.ca7.android.so
 vendor/lib64/libhwm.so
 vendor/lib64/libhydra.so
+vendor/lib64/libhypnusclient.so
 vendor/lib64/libifcutils_mtk.so
 vendor/lib64/libimageio.so
 vendor/lib64/libimageio_plat_drv.so
@@ -1359,6 +1509,7 @@ vendor/lib64/libjpeg-alpha-oal_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
 vendor/lib64/libkmsetkey.so
 vendor/lib64/libksensor.so
+vendor/lib64/libladder.so
 vendor/lib64/liblpcnr.so
 vendor/lib64/libmegface_rt_bokeh.so
 vendor/lib64/libmemsicd5603x.so
@@ -1366,14 +1517,22 @@ vendor/lib64/libmemtrack_GL.so
 vendor/lib64/libmfllcore.so
 vendor/lib64/libminiui.so
 vendor/lib64/libml_util.so
+vendor/lib64/libmmprofile.so
 vendor/lib64/libmnetlink_v104.so
 vendor/lib64/libmpvr.so
 vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libmtcloader.so
 vendor/lib64/libmxmafa.so
 vendor/lib64/libneuropilot_hal_utils.so
+vendor/lib64/libnvram.so
+vendor/lib64/libnvram_daemon_callback.so
+vendor/lib64/libnvram_platform.so
+vendor/lib64/libnvram_sec.so
 vendor/lib64/libocam_common.so
+vendor/lib64/libperfctl_vendor.so
 vendor/lib64/libpixelflinger.so
+vendor/lib64/libpowerhal.so
+vendor/lib64/libpowerhalwrap_vendor.so
 vendor/lib64/libpq_cust_base.so
 vendor/lib64/libpq_prot.so
 vendor/lib64/libratconfig.so
@@ -1386,6 +1545,8 @@ vendor/lib64/libspeech_enh_lib.so
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/libsrv_um.so
 vendor/lib64/libssl-ss.so
+vendor/lib64/libstdc++.so
+vendor/lib64/libstagefright_soft_voh264enc.so
 vendor/lib64/libstereoinfoaccessor_vsdof.so
 vendor/lib64/libstface_fd_api.so
 vendor/lib64/libstrongswan.so
@@ -1413,10 +1574,4 @@ vendor/lib64/sp2509v_mipi_raw_tuning.so
 vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.teeregistry@1.0.so
-vendor/res/images/lcd_test_00.png
-vendor/res/images/lcd_test_01.png
-vendor/res/images/lcd_test_02.png
-vendor/res/sound/ringtone.wav
-vendor/res/sound/testpattern1.wav
-vendor/ro.prop
-vendor/rw.prop
+vendor/res/sound/rin

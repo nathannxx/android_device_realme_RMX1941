@@ -1,1 +1,10 @@
-add_service(vtservice, mediavts_service)
+init_daemon_domain(vtservice)
+binder_use(vtservice)
+binder_call(vtservice, mediaserver)
+get_prop(vtservice, mtk_viwifi_support_prop)
+get_prop(vtservice, mtk_volte_support_prop)
+
+add_service(vtservice, vtservice_service)
+allow vtservice mtk_ims_service:service_manager find;
+allow vtservice radio_service:service_manager find;
+allow vtservice vtservice_service:service_manager add;

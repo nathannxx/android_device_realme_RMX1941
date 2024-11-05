@@ -8,18 +8,16 @@ oppo.camera.   u:object_r:oppo_camera_prop:s0
 
 # Dirac
 persist.audio.dirac                           u:object_r:dirac_prop:s0
-audio.dirac.logging                           u:object_r:dirac_prop:s0
 
 # RILD
 ro.telephony.default_network u:object_r:radio_prop:s0
 persist.ss.imsi.info         u:object_r:imsi_prop:s0
-vendor.oppo.network.carrier_ver  u:object_r:oppo_network_prop:s0
-odm.ril.radio.status.sim2  u:object_r:oppo_network_prop:s0
 
 # Audio
 audio.tuning.def_path                       u:object_r:audio_tunning_prop:s0
 persist.vendor.audio.tuning.def_path        u:object_r:audio_tunning_prop:s0
 
-# Sensors
-sys.oppo.hasPhysicalGyroscope u:object_r:oppo_sensor_prop:s0
-
+persist.vendor.audiohal.besloudness_state   u:object_r:audiohal_prop:s0
+vendor.streamout.pcm.dump                   u:object_r:audiohal_prop:s0
+vendor.audiohal.resource.extdac.support     u:object_r:audiohal_prop:s0
+vendor.audiohal.speech.log.mask             u:object_r:audiohal_prop:s0

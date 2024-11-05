@@ -3,5 +3,5 @@ runtime_resource_overlay {
     theme: "TetheringConfigOverlay",
     certificate: "platform",
     sdk_version: "current",
-    vendor: true
+    product_specific: true
 }
