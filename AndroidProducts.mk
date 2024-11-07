@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/bliss_RMX1941.mk
+	$(LOCAL_DIR)/arrow_RMX1941.mk
 
 COMMON_LUNCH_CHOICES := \
-        bliss_RMX1941-eng \
-        bliss_RMX1941-user \
-        bliss_RMX1941-userdebug
+        arrow_RMX1941-eng \
+        arrow_RMX1941-user \
+        arrow_RMX1941-userdebug

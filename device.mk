@@ -248,7 +248,6 @@ PRODUCT_PACKAGES += \
 # Remove Packages n stuff
 PRODUCT_PACKAGES += \
     nuke-apps \
-    overlay-bliss
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
