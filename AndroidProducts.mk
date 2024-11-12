@@ -15,9 +15,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/afterlife_RMX1941.mk
+	$(LOCAL_DIR)/arrow_RMX1941.mk
 
 COMMON_LUNCH_CHOICES := \
-        afterlife_RMX1941-eng \
-        afterlife_RMX1941-user \
-        afterlife_RMX1941-userdebug
+        arrow_RMX1941-eng \
+        arrow_RMX1941-user \
+        arrow_RMX1941-userdebug
+
