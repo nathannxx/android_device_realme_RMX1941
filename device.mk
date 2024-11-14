@@ -350,3 +350,7 @@ PRODUCT_COPY_FILES += \
 
 # Inherit Device Vendor
 $(call inherit-product, vendor/realme/RMX1941/RMX1941-vendor.mk)
+
+# Cassia
+PRODUCT_PACKAGES += \
+    CassiaOverlay
