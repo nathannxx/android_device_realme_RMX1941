@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/lineage_RMX1941.mk
+	$(LOCAL_DIR)/afterlife_RMX1941.mk
 
 COMMON_LUNCH_CHOICES := \
-        lineage_RMX1941-eng \
-        lineage_RMX1941-user \
-        lineage_RMX1941-userdebug
+        afterlife_RMX1941-eng \
+        afterlife_RMX1941-user \
+        afterlife_RMX1941-userdebug
