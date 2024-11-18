@@ -56,4 +56,9 @@ PRODUCT_BUILD_PROP_OVERRIDES := \
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+    ro.build.fingerprint=$(BUILD_FINGERPRINT) \
+    ro.device.maintainer=nathan \
+    ro.device.maintainer_link=https://t.me/natehiggas00 \
+    ro.device.chipset=MT6765 \
+    ro.device.display_resolution=720x1280 \
+    ro.device.colorbody_phone=blue 
