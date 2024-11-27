@@ -32,3 +32,15 @@ get_prop(radio, tel_switch_prop)
 get_prop(radio, mtk_aal_ro_prop)
 get_prop(radio, mtk_mdm_prop)
 get_prop(radio, ro_vendor_mtk_wfd_support_prop)
+
+# Define the radio_cdma_ecm_prop type
+type radio_cdma_ecm_prop, file_type;
+get_prop(radio, radio_cdma_ecm_prop)
+
+# Define the extra_spoof_data_file type
+type extra_spoof_data_file, file_type;
+allow radio extra_spoof_data_file:file { getattr open read };
+
+allow radio mtk_radio_seapi_off_prop:file { getattr open };
+allow radio vendor_default_prop:file { getattr open };
+allow radio vendor_mtk_radio_prop:file { open };

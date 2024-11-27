@@ -1,0 +1,5 @@
+# Define the hal_audio_sysbta type
+type hal_audio_sysbta, vendor_file_type;
+
+# Allow getting properties related to hal_audio_sysbta
+get_prop(hal_audio_sysbta, vendor_default_prop)

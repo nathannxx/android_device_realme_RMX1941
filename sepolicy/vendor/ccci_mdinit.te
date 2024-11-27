@@ -1,2 +1,4 @@
+type init_service_status_private_prop, property_type;
+get_prop(ccci_mdinit, init_service_status_private_prop)
 allow ccci_mdinit proc_oppo_ver:file r_file_perms;
 allow ccci_mdinit proc_oppo_opname:file r_file_perms;
