@@ -4,9 +4,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- DerpFest version -->
-    <string name="derp_version">DerpFest version</string>
-    <string name="derp_version_default">Dumpster.13-nath</string>
 
      <!-- DerpFest maintainer -->
     <string name="maintainer">Who's maintaining this shit</string>
