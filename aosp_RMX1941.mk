@@ -24,8 +24,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
-# Inherit some common ArrowOS stuff
-$(call inherit-product, vendor/arrow/config/common_full_phone.mk)
+# Inherit some common AOSP stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Lawnchair
 $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
@@ -44,7 +44,7 @@ TARGET_SUPPORTS_QUICK_TAP := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX1941
-PRODUCT_NAME := arrow_RMX1941
+PRODUCT_NAME := aosp_RMX1941
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C2
 PRODUCT_MANUFACTURER := realme
