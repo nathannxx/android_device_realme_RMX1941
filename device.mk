@@ -303,7 +303,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/power_whitelist_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_whitelist_cfg.xml
 
 # Properties
--include $(DEVICE_PATH)/vendor_prop.mk
+-include $(DEVICE_PATH)/configs/props/vendor_logging_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Protobuf
