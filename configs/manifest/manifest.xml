@@ -17,17 +17,12 @@
     <hal format="hidl">
         <name>android.hardware.bluetooth.audio</name>
         <transport>hwbinder</transport>
-        <fqname>@2.1::IBluetoothAudioProvidersFactory/default</fqname>
+        <fqname>@2.0::IBluetoothAudioProvidersFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
         <transport>hwbinder</transport>
         <fqname>@2.4::ICameraProvider/internal/0</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.configstore</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::ISurfaceFlingerConfigs/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -54,8 +49,6 @@
         <name>android.hardware.graphics.mapper</name>
         <transport arch="32+64">passthrough</transport>
         <fqname>@2.1::IMapper/default</fqname>
-        <fqname>@3.0::IMapper/default</fqname>
-        <fqname>@4.0::IMapper/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
@@ -106,12 +99,6 @@
         <fqname>@1.1::IRadioConfig/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.secure_element</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ISecureElement/SIM1</fqname>
-        <fqname>@1.0::ISecureElement/SIM2</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
         <fqname>@2.0::ISensors/default</fqname>
@@ -119,6 +106,11 @@
     <hal format="hidl">
         <name>android.hardware.thermal</name>
         <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IThermal</name>
+            <instance>default</instance>
+        </interface>
         <fqname>@1.0::IThermal/default</fqname>
     </hal>
     <hal format="hidl">
@@ -142,6 +134,11 @@
         <fqname>@1.2::ISupplicant/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.mediatek.hardware.gpu</name>
+	<transport>hwbinder</transport>
+	<fqname>@1.0::IGraphicExt/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.mediatek.hardware.atci</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IAtcid/default</fqname>
@@ -160,11 +157,6 @@
         <name>vendor.mediatek.hardware.engineermode</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::IEmd/EmHidlServer</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.gpu</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IGraphicExt/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.keymaster_attestation</name>
@@ -200,7 +192,6 @@
         <fqname>@1.0::ILog/ConnsysFWHidlServer</fqname>
         <fqname>@1.0::ILog/MobileLogHidlServer</fqname>
         <fqname>@1.0::ILog/ModemLogHidlServer</fqname>
-        <fqname>@1.0::ILog/aee</fqname>
         <fqname>@1.0::ILog/default</fqname>
     </hal>
     <hal format="hidl">
@@ -291,16 +282,6 @@
         <fqname>@2.0::ISupplicant/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.engnative.engineer</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IEngineer/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oppo.engnative.engsensor</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IEngSensor/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.oppo.hardware.biometrics.face</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IBiometricsFace/default</fqname>
@@ -316,16 +297,6 @@
         <fqname>@1.0::ISlogan/internal/0</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.hardware.cryptoeng</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ICryptoeng/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oppo.hardware.hypnus</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IHypnusUtil/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.oppo.hardware.ktv</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IKtv/default</fqname>
@@ -339,11 +310,6 @@
         <name>vendor.oppo.hardware.wifi.hostapd</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IOppoHostapd/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.soter</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ISoter/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.trustonic.tee</name>
