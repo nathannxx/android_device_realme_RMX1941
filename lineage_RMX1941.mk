@@ -62,4 +62,5 @@ PRODUCT_BUILD_PROP_OVERRIDES := \
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+    ro.build.fingerprint=$(BUILD_FINGERPRINT) \
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.threebutton
