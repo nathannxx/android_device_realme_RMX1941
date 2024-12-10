@@ -20,7 +20,7 @@ DEVICE_PATH := device/realme/RMX1941
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # IMS
-$(call inherit-product, vendor/realme/RMX1941-ims/RMX1941-ims.mk)
+$(call inherit-product, vendor/mtk-ims/ims.mk)
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 28
