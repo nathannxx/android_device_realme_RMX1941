@@ -37,6 +37,12 @@ TARGET_SCREEN_WIDTH := 720
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 720
 
+TARGET_SUPPORTS_QUICK_TAP := true
+
+# AlphaDroid
+ALPHA_MAINTAINER := nathan
+WITH_GAPPS := false
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX1941
 PRODUCT_NAME := lineage_RMX1941
