@@ -163,7 +163,7 @@
 
     <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
      <bool name="config_dozeAfterScreenOffByDefault">false</bool>
-     <bool name="config_dozeAlwaysOnDisplayAvailable">false</bool>
+     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
      <bool name="config_dozeAlwaysOnEnabled">true</bool>
      <bool name="config_displayBlanksAfterDoze">false</bool>
 
@@ -731,4 +731,8 @@
     <!-- List of comma separated package names for which we the system will not show crash like
          tts, etc. dialogs. -->
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
+
+    <!-- Whether the device supports Smart Pixels --> 
+    <bool name="config_enableSmartPixels">true</bool>
+
 </resources>
