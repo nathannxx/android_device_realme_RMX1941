@@ -271,12 +271,12 @@ PRODUCT_PACKAGES += \
     ueventd.mt6765.rc
 
 # Realme
-PRODUCT_PACKAGES += \
-    RealmeParts
+#PRODUCT_PACKAGES += \
+#    RealmeParts
 
-PRODUCT_PACKAGES += \
-    parts.rc \
-    perf_profile.sh
+#PRODUCT_PACKAGES += \
+#    parts.rc \
+#    perf_profile.sh
 
 # RenderScript
 PRODUCT_PACKAGES += \
