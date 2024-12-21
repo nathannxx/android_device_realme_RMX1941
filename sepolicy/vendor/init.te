@@ -1,3 +1,7 @@
+type ppp_exec, domain;
+type service_nvram_init_prop, domain;
+
+
 # Allow init to write touchpanel nodes
 allow init proc:file { open write };
 allow init proc_tp:file rw_file_perms;

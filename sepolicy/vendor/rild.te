@@ -1,3 +1,5 @@
+type ctl_viarild_prop, property_type;
+
 allow rild proc_oppo_ver:file r_file_perms;
 allow rild proc_oppo_opname:file r_file_perms;
 get_prop(rild, oppo_network_prop)

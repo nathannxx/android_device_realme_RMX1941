@@ -1,1 +1,2 @@
+type ro_mtk_aee_prop, property_type;
 get_prop(vpud_native, ro_mtk_aee_prop)

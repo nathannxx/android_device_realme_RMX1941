@@ -1,3 +1,7 @@
+type sysfs_bus, domain;
+type sysfs_emi_ctrl, domain;
+type vendor_vt_prop, domain;
+
 allow mediacodec sysfs_bus:dir search;
 allow mediacodec sysfs_emi_ctrl:dir search;
 get_prop(mediacodec, default_prop)

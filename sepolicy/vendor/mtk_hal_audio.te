@@ -1,3 +1,5 @@
+type mtk_hal_audio, domain;
+
 get_prop(mtk_hal_audio, dirac_prop)
 get_prop(mtk_hal_audio, service_nvram_init_prop)
 get_prop(mtk_hal_audio, tel_switch_prop)

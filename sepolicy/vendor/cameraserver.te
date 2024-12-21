@@ -1,3 +1,6 @@
+type mtk_camera_prop, domain;
+type vendor_audio_prop, domain;
+
 allow cameraserver init:unix_stream_socket connectto;
 allow cameraserver property_socket:sock_file write;
 allow cameraserver adb_data_file:file read;

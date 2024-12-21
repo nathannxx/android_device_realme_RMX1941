@@ -1,3 +1,6 @@
+type mtk_dmc_prop, property_type;
+type ro_vendor_mtk_wfd_support_prop, property_type;
+
 # Allow platform_app to get debug_mtk_gpud_prop
 get_prop(platform_app, debug_mtk_gpud_prop)
 
