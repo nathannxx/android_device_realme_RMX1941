@@ -543,7 +543,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.gpu</name>
-        <version>1.3</version>
+        <version>1.0</version>
         <interface>
             <name>IGraphicExt</name>
             <instance>default</instance>
@@ -564,8 +564,27 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IOmx/default</fqname>
-        <fqname>@1.0::IOmxStore/default</fqname>
+        <version>1.0</version>
+        <interface>
+            <name>IOmx</name>
+            <name>IOmxStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.radio</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOmxStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.pq</name>
+        <version>2.3-6</version>
+        <interface>
+            <name>IPictureQuality</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 </compatibility-matrix>
