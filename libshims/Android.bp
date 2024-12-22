@@ -7,10 +7,18 @@ cc_library_shared {
         "libgui",
         "libstagefright",
         "libutils",
+        "libbinder",
     ],
     header_libs: [
         "libaudioclient_headers",
         "libmedia_headers",
         "libmediametrics_headers",
     ],
+}
+
+cc_library {
+    name: "libshim_camera_metadata",
+    shared_libs: ["libcamera_metadata"],
+    srcs: ["libshim_camera_metadata.cpp"],
+    vendor: true
 }
