@@ -1,13 +1,13 @@
-<manifest version="1.0" type="device" target-level="5">
+<manifest version="2.0" type="device" target-level="5">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <fqname>@5.0::IDevicesFactory/default</fqname>
+        <fqname>@6.0::IDevicesFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
-        <fqname>@5.0::IEffectsFactory/default</fqname>
+        <fqname>@6.0::IEffectsFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
@@ -15,14 +15,9 @@
         <fqname>@1.0::IBluetoothHci/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.bluetooth.audio</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::IBluetoothAudioProvidersFactory/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.camera.provider</name>
         <transport>hwbinder</transport>
-        <fqname>@2.4::ICameraProvider/internal/0</fqname>
+        <fqname>@2.6::ICameraProvider/internal/0</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -33,12 +28,12 @@
         <name>android.hardware.gnss</name>
         <transport>hwbinder</transport>
         <fqname>@1.1::IGnss/default</fqname>
-        <fqname>@2.0::IGnss/default</fqname>
+        <fqname>@2.1::IGnss/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.allocator</name>
         <transport>hwbinder</transport>
-        <fqname>@2.0::IAllocator/default</fqname>
+        <fqname>@4.0::IAllocator/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.composer</name>
@@ -48,12 +43,12 @@
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
         <transport arch="32+64">passthrough</transport>
-        <fqname>@2.1::IMapper/default</fqname>
+        <fqname>@4.0::IMapper/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
-        <fqname>@3.0::IKeymasterDevice/default</fqname>
+        <fqname>@4.0::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -71,7 +66,7 @@
         <transport>hwbinder</transport>
         <fqname>@1.3::IPower/default</fqname>
     </hal>
-    <hal format="hidl" override="true">
+    <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::IRadio/em1</fqname>
@@ -84,14 +79,14 @@
         <fqname>@1.2::IRadio/slot2</fqname>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
-        <fqname>@1.4::IRadio/em1</fqname>
-        <fqname>@1.4::IRadio/em2</fqname>
-        <fqname>@1.4::IRadio/imsAospSlot1</fqname>
-        <fqname>@1.4::IRadio/imsAospSlot2</fqname>
-        <fqname>@1.4::IRadio/se1</fqname>
-        <fqname>@1.4::IRadio/se2</fqname>
-        <fqname>@1.4::IRadio/slot1</fqname>
-        <fqname>@1.4::IRadio/slot2</fqname>
+        <fqname>@1.5::IRadio/em1</fqname>
+        <fqname>@1.5::IRadio/em2</fqname>
+        <fqname>@1.5::IRadio/imsAospSlot1</fqname>
+        <fqname>@1.5::IRadio/imsAospSlot2</fqname>
+        <fqname>@1.5::IRadio/se1</fqname>
+        <fqname>@1.5::IRadio/se2</fqname>
+        <fqname>@1.5::IRadio/slot1</fqname>
+        <fqname>@1.5::IRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
@@ -106,17 +101,13 @@
     <hal format="hidl">
         <name>android.hardware.thermal</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IThermal</name>
-            <instance>default</instance>
-        </interface>
         <fqname>@1.0::IThermal/default</fqname>
+        <fqname>@2.0::IThermal/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.usb</name>
         <transport>hwbinder</transport>
-        <fqname>@1.1::IUsb/default</fqname>
+        <fqname>@1.0::IUsb/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.wifi</name>
@@ -144,6 +135,11 @@
         <fqname>@1.0::IAtcid/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.mediatek.hardware.bluetooth.audio</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.1::IBluetoothAudioProvidersFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.mediatek.hardware.camera.bgservice</name>
         <transport>hwbinder</transport>
         <fqname>@1.1::IBGService/internal/0</fqname>
@@ -152,11 +148,6 @@
         <name>vendor.mediatek.hardware.camera.ccap</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::ICCAPControl/internal/0</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.engineermode</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::IEmd/EmHidlServer</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.keymaster_attestation</name>
@@ -212,26 +203,26 @@
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mtkpower</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::IMtkPerf/default</fqname>
-        <fqname>@1.0::IMtkPower/default</fqname>
+        <fqname>@1.2::IMtkPerf/default</fqname>
+        <fqname>@1.2::IMtkPower/default</fqname>
     </hal>
     <hal format="hidl" override="true">
         <name>vendor.mediatek.hardware.mtkradioex</name>
         <transport>hwbinder</transport>
-        <fqname>@1.3::IMtkRadioEx/imsSlot1</fqname>
-        <fqname>@1.3::IMtkRadioEx/imsSlot2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkAssist1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkAssist2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkCap1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkCap2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkEm1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkEm2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkRcs1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkRcs2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkSe1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkSe2</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkSlot1</fqname>
-        <fqname>@1.3::IMtkRadioEx/mtkSlot2</fqname>
+        <fqname>@2.0::IMtkRadioEx/imsSlot1</fqname>
+        <fqname>@2.0::IMtkRadioEx/imsSlot2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkAssist1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkAssist2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkCap1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkCap2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkEm1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkEm2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkRcs1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkRcs2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkSe1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkSe2</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkSlot1</fqname>
+        <fqname>@2.0::IMtkRadioEx/mtkSlot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.netdagent</name>
@@ -256,7 +247,7 @@
     <hal format="hidl">
         <name>vendor.mediatek.hardware.pq</name>
         <transport>hwbinder</transport>
-        <fqname>@2.3::IPictureQuality/default</fqname>
+        <fqname>@2.6::IPictureQuality/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.radio_op</name>
@@ -314,16 +305,11 @@
     <hal format="hidl">
         <name>vendor.trustonic.tee</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::ITee/default</fqname>
+        <fqname>@1.1::ITee/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.trustonic.tee.tui</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::ITui/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.trustonic.teeregistry</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ITeeRegistry/default</fqname>
     </hal>
 </manifest>
